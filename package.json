@@ -1,0 +1,12 @@
+{
+  "name": "mini_project",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node backend/server.js",
+    "client": "npm run dev --prefix frontend"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
