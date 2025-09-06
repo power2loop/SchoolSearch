@@ -26,10 +26,7 @@ function ShowSchools() {
                 {schools.map((school) => (
                     <div key={school.id} className="card">
                         <div className="card-img">
-                            <img
-                                src={`http://localhost:5000/schoolImages/${school.image}`}
-                                alt={school.name}
-                            />
+                            <img src={school.image} alt={school.name} />
                         </div>
                         <div className="card-body">
                             <h3>{school.name}</h3>
