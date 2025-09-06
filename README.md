@@ -84,5 +84,45 @@ Before you begin, ensure you have the following installed on your machine:
 ## 📦 Installation
 
 1. **Clone the repository**
+2. **Install root dependencies** 
+3. **Install frontend dependencies**  
+4. **Install backend dependencies**
+
+
+
+## 🔌 API Endpoints
+
+### Schools
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/schools` | Retrieve all schools |
+| POST | `/api/schools` | Add a new school (with image upload) |
+
+### Request/Response Examples
+
+**GET /api/schools**
+
+
+## 🚀 Deployment
+
+### Deploy to Render
+
+1. **Fork this repository**
+
+2. **Connect to Render:**
+   - Go to [Render Dashboard](https://dashboard.render.com/)
+   - Click "New" → "Web Service"
+   - Connect your GitHub repository
+
+3. **Configure the service:**
+   - **Build Command**: `npm run build`
+   - **Start Command**: `npm start`
+   - **Environment**: Node
+
+4. **Set environment variables:**
+
+
+
 
 
