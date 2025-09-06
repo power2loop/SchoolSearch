@@ -12,25 +12,10 @@
 
 **🔗 [Visit School Search Application](https://schoolsearch-kqy9.onrender.com/)**
 
-## 📋 Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Screenshots](#screenshots)
-- [Getting Started](#getting-started)
-- [Installation](#installation)
-- [Environment Variables](#environment-variables)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## 🎯 About
 
-School Search is a full-stack web application that allows users to discover, search, and manage educational institutions. Built with modern technologies, it provides a seamless experience for both administrators adding school information and users searching for educational options.
+School Search is a full-stack web application that enables users to discover, search for, and manage educational institutions. Built with modern technologies, it provides a seamless experience for both administrators adding school information and users searching for educational options.
 
 The application features a clean, responsive design with comprehensive school management capabilities, including image uploads, detailed school information, and an intuitive search interface.
 
@@ -38,7 +23,6 @@ The application features a clean, responsive design with comprehensive school ma
 
 ### Core Functionality
 - 🏫 **Add Schools**: Comprehensive form to add new educational institutions
-- 🔍 **Search & Filter**: Advanced search capabilities to find schools
 - 📸 **Image Upload**: Upload and manage school images with Supabase storage
 - 📱 **Responsive Design**: Fully responsive interface that works on all devices
 - 🚀 **Real-time Updates**: Instant updates when new schools are added
@@ -78,7 +62,7 @@ The application features a clean, responsive design with comprehensive school ma
 
 ## 🖼️ Screenshots
 
-*Screenshots will be added here showcasing the main features of the application*
+<img width="1857" height="939" alt="image" src="https://github.com/user-attachments/assets/8117242f-0d12-4e54-af7e-37e53b22c8b7" />
 
 ## 🚀 Getting Started
 
@@ -100,4 +84,5 @@ Before you begin, ensure you have the following installed on your machine:
 ## 📦 Installation
 
 1. **Clone the repository**
+
 
