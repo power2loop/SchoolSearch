@@ -3,18 +3,19 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../pages/showSchool.css";
 
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 function ShowSchools() {
     const [schools, setSchools] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/api/schools").then((res) => {
+        axios.get(`${API_BASE}/api/schools`).then((res) => {
             setSchools(res.data);
         });
     }, []);
 
     return (
         <div className="school-page">
-
             <div className="top-bar">
                 <h2>Schools List</h2>
                 <Link to="/add">

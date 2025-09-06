@@ -3,6 +3,8 @@ import { useState } from "react";
 import axios from "axios";
 import "../pages/addschool.css";
 
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 function AddSchool() {
     const {
         register,
@@ -24,7 +26,7 @@ function AddSchool() {
                 }
             }
 
-            await axios.post("http://localhost:5000/api/schools", formData, {
+            await axios.post(`${API_BASE}/api/schools`, formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
 
