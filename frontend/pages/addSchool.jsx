@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./addSchool.css";
@@ -16,13 +16,21 @@ function AddSchool() {
 
     const [message, setMessage] = useState("");
     const [isError, setIsError] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const navigate = useNavigate();
 
+    useEffect(() => {
+        if (message) {
+            const timer = setTimeout(() => setMessage(""), 5000);
+            return () => clearTimeout(timer);
+        }
+    }, [message]);
+
     const onSubmit = async (data) => {
+        setLoading(true);
         try {
             const formData = new FormData();
-
             for (let key in data) {
                 if (key === "image" && data.image?.[0]) {
                     formData.append("image", data.image[0]);
@@ -42,6 +50,8 @@ function AddSchool() {
             console.error(error);
             setMessage("Error adding school");
             setIsError(true);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -94,8 +104,16 @@ function AddSchool() {
                     </div>
 
                     <div className="button-group">
-                        <button type="submit">Add School</button>
-                        <button type="button" onClick={() => navigate("/")}>
+                        <button type="submit" disabled={loading}>
+                            {loading ? "Adding..." : "Add School"}
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => {
+                                reset();
+                                navigate("/");
+                            }}
+                        >
                             Go Home
                         </button>
                     </div>
