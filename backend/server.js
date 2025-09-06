@@ -26,6 +26,8 @@ const storage = multer.diskStorage({
     filename: (req, file, cb) => cb(null, Date.now() + "-" + file.originalname)
 });
 const upload = multer({ storage, limits: { fileSize: 5 * 1024 * 1024 } });
+
+
 app.use("/schoolImages", express.static(path.join(__dirname, "schoolImages")));
 
 app.post("/api/schools", upload.single("image"), async (req, res) => {
