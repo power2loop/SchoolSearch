@@ -2,7 +2,7 @@
   "name": "mini_project",
   "version": "1.0.0",
   "scripts": {
-    "build": "npm install --prefix ./backend && npm install --prefix ./frontend && npm run build --prefix ./frontend",
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install",
     "start": "node backend/server.js",
     "frontend": "npm run dev --prefix ./frontend",
     "backend": "npm run start --prefix ./backend",
@@ -10,5 +10,8 @@
   },
   "dependencies": {
     "concurrently": "^9.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
