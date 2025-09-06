@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "../pages/showSchool.css";
+import "./showSchool.css";
 
 const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
