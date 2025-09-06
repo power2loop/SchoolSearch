@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import axios from "axios";
-import "../pages/addschool.css";
+import "../pages/addSchool.css";
 
 const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
